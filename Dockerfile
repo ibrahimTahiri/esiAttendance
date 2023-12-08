@@ -2,6 +2,7 @@ FROM php:8.2-fpm
 
  RUN apt-get update && apt-get install -y \
      git \
+    #   récupérer des fichiers depuis Internet
      curl \ 
     #  manipulation chaine de caractère
      libonig-dev \
@@ -34,9 +35,9 @@ COPY .env.example .env
 
 #copie tout mon projet laravel dans /www de l'image docker
 COPY . .
-RUN php artisan key:generate
-RUN touch database/database.sqlite
-RUN touch database/test.sqlite
+# RUN php artisan key:generate
+# RUN touch database/database.sqlite
+# RUN touch database/test.sqlite
 
 #host 0.0.0.0 = le serveur laravel est accessible en dehors du conteneur et depuis Windows également
 CMD php artisan migrate:fresh --seed && php artisan serve --host=0.0.0.0 --port=80
