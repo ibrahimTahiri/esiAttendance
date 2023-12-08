@@ -6,7 +6,7 @@ FROM php:8.2-fpm
 #     libpng-dev \
 #     libonig-dev \
 #     libxml2-dev \
-#     zip \
+     zip \
 #     unzip \
 #     libzip-dev 
     
