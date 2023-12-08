@@ -45,7 +45,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'appWebAttendance'
+        app-name: 'appWebattendance'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_72baf19eacaf4852b9d59234de7e18c2 }}
         images: 'registreattendance.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_c6b7a93fe0444b1d8b08f1e66bc6638e }}/app:${{ github.sha }}'
