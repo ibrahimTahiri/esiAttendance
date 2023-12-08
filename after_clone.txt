@@ -1,0 +1,18 @@
+1) cp .env.example .env
+
+composer update
+
+2) avoir extension zip et pdo_sqlite (décommenté dans php.ini)
+
+3) php artisan key:generate
+
+4) dans le .env DBDATABASE=database.sqlite
+
+5) php artisan migrate:fresh --seed
+
+__
+
+docker build -t app . : créer une image docker à partir du dockerFile
+
+voir si mbstring besoin?
+
