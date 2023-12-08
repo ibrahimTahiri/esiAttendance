@@ -3,9 +3,8 @@ FROM php:8.2-fpm
  RUN apt-get update && apt-get install -y \
      git \
      curl \ 
-    #  libpng-dev \
+    #  manipulation chaine de caractère
      libonig-dev \
-    #  libxml2-dev \
     #  utilitaires pour compresser et décompresser des fichiers au format ZIP. 
      zip \
      unzip \
@@ -18,7 +17,7 @@ FROM php:8.2-fpm
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #installer pdo_mysql mbstring et zib
-RUN docker-php-ext-install pdo_mysql mbstring zip
+RUN docker-php-ext-install pdo_sqlite mbstring zip
 
 
 #définir répertoire de trvail, toutes commande après sera exécuté dans ce répertoire
