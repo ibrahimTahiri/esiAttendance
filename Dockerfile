@@ -4,10 +4,12 @@ FROM php:8.2-fpm
      git \
      curl \ 
     #  libpng-dev \
-     libonig-dev \
+    #  libonig-dev \
      libxml2-dev \
+    #  utilitaires pour compresser et décompresser des fichiers au format ZIP. 
      zip \
      unzip \
+    #   manipulation de fichiers ZIP
      libzip-dev 
     
 
