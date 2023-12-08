@@ -7,8 +7,8 @@ FROM php:8.2-fpm
 #     libonig-dev \
 #     libxml2-dev \
      zip \
-     unzip 
-#     libzip-dev 
+     unzip \
+     libzip-dev 
     
 
 
