@@ -12,7 +12,7 @@
             <li><a href="{{ route('lessons.index') }}">Lessons</a></li>
         </ul>
     </menu>
-    <h1>Liste des Étudiants</h1>
+    <h1>Liste des Étudiants yassine bi food</h1>
 
     <table>
         <thead>
