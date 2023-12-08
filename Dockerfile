@@ -17,7 +17,7 @@ FROM php:8.2-fpm
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #installer pdo_mysql mbstring et zib
-RUN docker-php-ext-install pdo_sqlite mbstring zip
+RUN docker-php-ext-install mbstring zip
 
 
 #définir répertoire de trvail, toutes commande après sera exécuté dans ce répertoire
