@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Étudiants</title>
+    <title>Liste des Étudiantss</title>
 </head>
 <body>
     <menu>
@@ -12,7 +12,7 @@
             <li><a href="{{ route('lessons.index') }}">Lessons</a></li>
         </ul>
     </menu>
-    <h1>Liste des Étudiants yassine ibrahim bifood</h1>
+    <h1>Liste des Étudiants</h1>
 
     <table>
         <thead>
