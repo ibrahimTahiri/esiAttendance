@@ -26,6 +26,13 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_5e26b08f4d9f43eaa2fb3d5f56a5082e }}
         password: ${{ secrets.AzureAppService_ContainerPassword_efeef030fbf8457b8c07d970b8049241 }}
 
+    - name: SonarCloud scan
+        uses: sonarsource/sonarcloud-github-action@master
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
+
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
